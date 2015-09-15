@@ -10,6 +10,157 @@ Template:       Divi
 /*@import url("../Divi/style.css");*/
 
 
+.single-post #primary {
+    margin: 0;
+}
+.single-post #content {
+    margin: 0 3%;
+    width: 94%;
+}
+.single .site-content {
+    margin: 0;
+}
+
+.video-section {
+    max-height: 390px;
+}
+
+.video-section .et_pb_column.et_pb_column_1_4 {
+    overflow-y: scroll;
+    overflow-x: hide;
+    max-height: 390px;
+}
+
+/* Arreglos para fijar el ancho */
+
+body {
+    margin: auto;
+    max-width: 320px;
+    font-family: open sans;
+    max-width: 960px;
+}
+
+#main-header, body.admin-bar.et_fixed_nav #top-header {
+    margin: auto;
+    max-width: 960px;
+}
+.container,
+.et_pb_row  {
+    max-width: 960px;
+}
+
+.et_pb_column_1_3 {
+    width: 300px;
+}
+.et_pb_column_3_4 {
+    width: 705px;
+}
+.et_pb_column {
+    float: left;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 959) {
+    body {
+        max-width: 320px;
+    }
+}
+
+.header-banner .addtoany_share_save_container,
+.footer-widget .addtoany_share_save_container {
+    display: none;
+}
+
+/* related songs styles */
+
+.related-bands .et_pb_image_container img,
+.related-songs .et_pb_image_container img {
+    float: left;
+    height: 120px;
+    margin-right: 10px;
+    width: 120px;
+}
+
+
+
+.related-bands p,
+.related-songs p {
+    display: none;
+}
+
+.related-bands article {
+    float: left;
+    margin: 0 1.5% !important;
+    width: 30%;
+}
+.related-bands img {
+    float: left;
+    width: 50%;
+}
+.related-bands h2 {
+    float: left;
+    margin: 2.5%;
+    width: 45%;
+}
+
+
+/* details-list  */
+
+
+.details-first-column {
+    float: left;
+    width: 9em;
+}
+.details-second-column {
+    float: right;
+}
+.details-list hr {
+    clear: both;
+}
+
+.songs-and-details-section .et_pb_column_1_4 {
+    margin: 0 5px;
+    width: 203px;
+}
+.songs-and-details-section .et_pb_column_1_4:nth-child(4) {
+    width: 310px;
+    float: right;
+    clear: right;
+}
+.details-list ul {
+    list-style-type: none !important;
+}
+/* Fix side bar settings hiden */
+
+
+.et_pb_page_settings.et_pb_page_layout_settings {
+    display: block !important;
+}
+
+.band-main-image {
+    height: auto;
+    width: 100%;
+}
+
+.item-song-title {
+    float: left;
+    width: 45%;
+}
+.item-song-header > img {
+    float: left;
+    height: auto;
+    margin-right: 5px;
+    width: 50%;
+}
+
+div#footer-third-column br {
+    display: none;
+}
+
+div#footer-third-column {
+    overflow: hidden;
+}
+
 /* Fix anti-responsive */
 
 img {
@@ -67,7 +218,7 @@ body {
     color: #ff8f5f;
     float: right;
     font-weight: bold;
-	padding-top: 20px;
+	padding-top: 0px;
 }
 .container,
 .et_pb_row  {
@@ -147,7 +298,10 @@ body {
     width: 120px;
 }
 
-
+.related-songs ul li a img {
+    height: 115px;
+    width: auto;
+}
 
 .related-bands p,
 .related-songs p {
@@ -270,6 +424,39 @@ img.band-main-image {
     width: 100%;
 }
 
+.bands-pagination .page-numbers > li {
+    width: 29px;
+    height: 24px;
+    border: 1px solid #d3ced2;
+    margin: 0;
+}
+nav.bands-pagination {
+    clear: both;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+.page-numbers {
+    margin-left: 34%;
+    text-align: center;
+    width: 50%;
+    padding: 0;
+}
+
+.page-number.active {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.page-numbers > li {
+    border: 1px none #000000;
+}
+
+ul.page-numbers li a.page-number {
+    margin: 0 25% !important;
+    width: 50% !important;
+}
+
 .item-song-title {
     float: left;
     width: 45%;
@@ -381,8 +568,6 @@ margin: 4px;
 }
 .related-songs ul > li > a > img {
     float: left;
-    height: auto;
-    width: 90%;
 }
 
 /* related bands */
@@ -445,6 +630,10 @@ margin: 4px;
 	background: none;
 }
 
+#main-content .container {
+    padding-top: 10px;
+}
+
 /* Header */
 
 
@@ -466,6 +655,10 @@ div#et_top_search form input.et-search-field {
 
 #contact-information a.et-cart-info:hover {
     color: #ec5518 !important;
+}
+
+#logo {
+    height: 78px;
 }
 
 #et-info,
@@ -758,6 +951,12 @@ ul.alphabetical-list li div.list-container ul li {
 	text-transform: uppercase;
 	padding-left: 5px;
     	font-weight: 600;
+}
+
+.section-title h3 {
+    font-size: 16px;
+    padding-bottom: 5px;
+    padding-top: 3px;
 }
 
 .section-title hr {

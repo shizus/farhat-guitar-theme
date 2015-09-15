@@ -88,20 +88,29 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 
                     <?php
                     endwhile;
-
-                    // pager
-                    if($new_query->max_num_pages>1){?>
-                        <div class="pagination-arrows">
+?>
+                    <nav class="bands-pagination">
+                <?php
+                        if($new_query->max_num_pages>1){?>
+                        <ul class="page-numbers">
                             <?php
                             for($i=1;$i<=$new_query->max_num_pages;$i++){?>
-                                <a href="<?php echo $current_url.'page/'.$i;?>" <?php echo ($paged==$i)? 'class="active"':'';?>><?php echo $i;?></a>
+                                <li>
+                                    <a href="<?php echo $current_url.'page/'.$i;?>" class="page-number <?php echo ($paged==$i)? 'active':'';?>"><?php echo $i;?></a>
+                                </li>
+
                             <?php
                             }
                             if($paged!=$new_query->max_num_pages){?>
-                                <a href="<?php echo get_category_link($category_id).'page/'.$i;?>">Siguiente</a>
+                                <li>
+                                    <a href="<?php echo $current_url.'page/'. ($paged+1);?>"  class="page-number next">→</a>
+                                </li>
                             <?php } ?>
                         </div>
-                    <?php } ?>
+                        <?php } ?>
+
+                    </nav>
+
 
                 </ul>
 
