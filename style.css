@@ -74,6 +74,11 @@ body {
     max-width: 960px;
 }
 
+.donate-container {
+    float: right;
+    margin-top: 10px;
+}
+
 .et_pb_row {
   padding-top: 0px;
 }
@@ -95,7 +100,7 @@ body {
     margin-right: 8px !important;
 }
 
-@media screen and (max-width: 959) { 
+@media screen and (max-width: 959px) {
      body {
        max-width: 320px;
      }
@@ -136,7 +141,7 @@ body {
 
 .related-bands .et_pb_image_container img,
 .related-songs .et_pb_image_container img {
-    float: left;latest-uploads
+    float: left;
     height: 120px;
     margin-right: 10px;
     width: 120px;
@@ -289,9 +294,6 @@ img.band-main-image {
     overflow-y: auto;
 }
 
-.part-songs-list > ul{
-    list
-}
 
 .part-songs-list > ul > li {
     list-style: outside none none;
@@ -397,7 +399,7 @@ margin: 4px;
     width: 46%;
     margin: 2%;
 }
-selectorSavingError {
+.selectorSavingError {
     float: left;
 }
 
@@ -457,11 +459,19 @@ div#et_top_search form input.et-search-field {
 
 .et-cart-info {
     clear: both;
+    color: #000000;
     float: right;
+    margin-top: -1.5em;
 }
 
 #contact-information a.et-cart-info:hover {
-    color: #000000 !important;
+    color: #ec5518 !important;
+}
+
+#et-info,
+#et-info span {
+    color: #ff8f5f;
+    float: none !important;
 }
 
 #et-top-navigation {
@@ -486,6 +496,16 @@ header#main-header img#logo {
 #contact-information > form {
     float: right;
     margin-top: 8px;
+}
+
+#contact-information {
+    width: 45em;
+}
+#contact-information > #mail-phone {
+    float: left;
+}
+.social-icons-container {
+    float: right;
 }
 
 #main-header nav#top-menu-nav {
@@ -863,9 +883,7 @@ div#footer-bottom {
 }
 
 #suscribe-box {
-    background-image: url(./../../uploads/2015/05/educational_2_background.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: url('./../../uploads/2015/05/educational_2_background.jpg') no-repeat center center;
     background-size: cover;
     height: 250px;
     padding: 0;
@@ -932,6 +950,14 @@ ul.lcp_paginator {
 	width: 48% !important;
 }
 
+li.product {
+    height: 190px;
+}
+
+span.et_shop_image {
+    height: 149px;
+    overflow: hidden;
+}
 
 /* Acordes */
 

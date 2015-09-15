@@ -47,7 +47,7 @@
 
 	$et_phone_number = $et_secondary_nav_items->phone_number;
 
-	$et_email = $et_secondary_nav_items->email;
+	$et_email = "contact@farhatguitar.com";//$et_secondary_nav_items->email;
 
 	$et_contact_info_defined = $et_secondary_nav_items->contact_info_defined;
 
@@ -65,25 +65,6 @@
 	<?php if ( $et_top_info_defined ) : ?>
 		<div id="top-header" class="<?php echo esc_attr( $secondary_nav_class ); ?>">
 			<div class="container clearfix">
-
-			<?php if ( $et_contact_info_defined ) : ?>
-
-				<div id="et-info">
-				<?php if ( '' !== ( $et_phone_number = et_get_option( 'phone_number' ) ) ) : ?>
-					<span id="et-info-phone"><?php echo esc_html( $et_phone_number ); ?></span>
-				<?php endif; ?>
-
-				<?php if ( '' !== ( $et_email = et_get_option( 'header_email' ) ) ) : ?>
-					<!--a href="<?php echo esc_attr( 'mailto:' . $et_email ); ?>"><span id="et-info-email"><?php echo esc_html( $et_email ); ?></span></a-->
-				<?php endif; ?>
-
-				<?php
-				if ( true === $show_header_social_icons ) {
-					//get_template_part( 'includes/social_icons', 'header' );
-				} ?>
-				</div> <!-- #et-info -->
-
-			<?php endif; // true === $et_contact_info_defined ?>
 
 				<div id="et-secondary-menu">
 				<?php
@@ -129,21 +110,51 @@
 					<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" />
 				</a>
 <div id="contact-information">
-<?php $post_banner = get_post(2107); 
-						$content = $post_banner->post_content;
-						echo apply_filters( 'the_content',  $content );
-						get_template_part( 'includes/social_icons', 'header' );
-						?>
-<form method="post" action="https://www.paypal.com/cgi-bin/webscr">
-<input type="hidden" value="_s-xclick" name="cmd">
-<input type="hidden" value="USP7M8W7CK728" name="hosted_button_id">
-<input type="image" id="paypal-1" src="http://farhatguitar.com/wp-content/uploads/2015/06/donate.png" name="submit" alt="PayPal - The safer, easier way to pay online!">
-</form>
+
+    <div id="mail-phone">
+
+        <?php $post_banner = get_post(2107);
+        $content = $post_banner->post_content;
+        echo apply_filters( 'the_content',  $content );
+        ?>
+
+        <div id="et-info">
+            <?php //if ( '' !== ( $et_phone_number = et_get_option( 'phone_number' ) ) ) : ?>
+            <!--<span id="et-info-phone"><?php //echo esc_html( $et_phone_number ); ?></span>-->
+            <?php //endif; ?>
+
+            <?php //if ( '' !== ( $et_email = et_get_option( 'header_email' ) ) ) : ?>
+            <a href="<?php echo esc_attr( 'mailto:' . $et_email ); ?>"><span id="et-info-email"><?php echo esc_html( $et_email ); ?></span></a>
+            <?php //endif; ?>
+
+            <?php
+            if ( true === $show_header_social_icons ) {
+                //get_template_part( 'includes/social_icons', 'header' );
+            } ?>
+        </div> <!-- #et-info -->
+    </div>
+    <div class="social-icons-container">
+       <?php get_template_part( 'includes/social_icons', 'header' ); ?>
+    </div>
+    <div class="donate-container">
+        <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
+            <input type="hidden" value="_s-xclick" name="cmd">
+            <input type="hidden" value="USP7M8W7CK728" name="hosted_button_id">
+            <input type="image" id="paypal-1" src="http://farhatguitar.com/wp-content/uploads/2015/06/donate.png" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        </form>
+    </div>
+
+
 
 <?php
 						
 						et_show_cart_total();
 					?>
+    <?php if ( $et_contact_info_defined ) : ?>
+
+
+
+    <?php endif; // true === $et_contact_info_defined ?>
 </div>
 
 				<div id="et-top-navigation">

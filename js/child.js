@@ -103,6 +103,9 @@ jQuery(document).ready(function($) {
 	$ = jQuery;
 	var tabs = $('.tab-container');
 	$('.video-section').before(tabs);
+
+    $('li.first').removeClass('first');
+    $('li.last').removeClass('last');
 });
 
 
